@@ -1,7 +1,7 @@
 {
   "name": "create-express-nalendro",
   "version": "1.0.3",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "bin": {
     "create-express-nalen": "./bin/index.js"
   },
