@@ -1,6 +1,6 @@
 {
   "name": "create-express-nalendro",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./bin/index.js",
   "bin": {
     "create-express-nalen": "./bin/index.js"
@@ -11,8 +11,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "inquirer": "^10.1.8"
-  }
+  "description": ""
 }
