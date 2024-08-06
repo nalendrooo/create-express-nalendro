@@ -85,7 +85,6 @@ async function main() {
     copyRecursive(templateDir, dest);
 
     console.log(`Project ${projectName} created successfully at ${dest}`);
-    console.log(`You chose ${projectType} - ${language}.`);
 }
 
 main();
