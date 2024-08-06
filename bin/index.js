@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const process = require('process');
-const inquirer = require('inquirer');
+// const inquirer = require('inquirer');
 
 // Fungsi untuk menyalin folder dan file secara rekursif, dengan pengecualian folder tertentu
 function copyRecursive(src, dest) {
@@ -33,26 +33,26 @@ async function main() {
     const projectName = args[0] || 'my-express-app';
 
     // Prompt untuk memilih antara JavaScript atau TypeScript
-    const { projectType } = await inquirer.prompt([
-        {
-            type: 'list',
-            name: 'projectType',
-            message: 'What type of project are you creating?',
-            choices: ['Express.js'],
-            default: 'Express.js'
-        }
-    ]);
+    // const { projectType } = await inquirer.prompt([
+    //     {
+    //         type: 'list',
+    //         name: 'projectType',
+    //         message: 'What type of project are you creating?',
+    //         choices: ['Express.js'],
+    //         default: 'Express.js'
+    //     }
+    // ]);
 
-    // Prompt untuk memilih antara JavaScript atau TypeScript
-    const { language } = await inquirer.prompt([
-        {
-            type: 'list',
-            name: 'language',
-            message: 'Which language would you like to use?',
-            choices: ['TypeScript'],
-            default: 'TypeScript'
-        }
-    ]);
+    // // Prompt untuk memilih antara JavaScript atau TypeScript
+    // const { language } = await inquirer.prompt([
+    //     {
+    //         type: 'list',
+    //         name: 'language',
+    //         message: 'Which language would you like to use?',
+    //         choices: ['TypeScript'],
+    //         default: 'TypeScript'
+    //     }
+    // ]);
 
     // Menentukan direktori template berdasarkan pilihan
     let templateDir;
@@ -63,14 +63,15 @@ async function main() {
     //         templateDir = path.resolve(__dirname, '../create-express-nalen/template-react-typescript');
     //     }
     // } 
-    if (projectType === 'Express.js') {
-        // if (language === 'JavaScript') {
-        //     templateDir = path.resolve(__dirname, '../create-express-nalen/template-express-javascript');
-        // } else 
-        if (language === 'TypeScript') {
-            templateDir = path.resolve(__dirname, '../template-express-typescript');
-        }
-    }
+    // if (projectType === 'Express.js') {
+    //     // if (language === 'JavaScript') {
+    //     //     templateDir = path.resolve(__dirname, '../create-express-nalen/template-express-javascript');
+    //     // } else 
+    //     if (language === 'TypeScript') {
+    //         templateDir = path.resolve(__dirname, '../template-express-typescript');
+    //     }
+    // }
+    templateDir = path.resolve(__dirname, '../template-express-typescript');
 
     // Path ke folder tujuan
     const dest = path.resolve(process.cwd(), projectName);
